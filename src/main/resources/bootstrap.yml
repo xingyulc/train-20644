@@ -1,0 +1,41 @@
+server:
+  port: 20644
+spring:
+  application:
+    name: lc20644
+  cloud:
+    config:
+      failFast: true
+      retry:
+        maxAttempts: 6
+        multiplier: 1.5
+        maxInterval: 2000
+      uri: localhost:8010
+      enabled: false
+management:
+  port: 20644
+  security:
+    enabled: false
+security:
+  basic:
+    enabled: false
+
+#
+#server:
+#  port: 8080
+#spring:
+#  application:
+#    name: choerodon-todo-service
+#  cloud:
+#    config:
+#      failFast: true
+#      retry:
+#        maxAttempts: 6
+#        multiplier: 1.5
+#        maxInterval: 2000
+#      uri: localhost:8010
+#      enabled: false
+#management:
+#  port: 8081
+#  security:
+#    enabled: false
